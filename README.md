@@ -3,12 +3,12 @@ ols.jl
 
 Julia type for multiple (multivariate) regression using OLS. Performs least squared regression on linear equations of multiple independent variables
 
-### Author: Adam Savitzky
-### Email: asavitzky@forio.com
-### Github: github.com/adambom
+Author: Adam Savitzky
+Email: asavitzky@forio.com
+Github: github.com/adambom
 
-### Ported from the Python implemented by Vincent Nijs
-### http://www.scipy.org/Cookbook/OLS?action=AttachFile&do=get&target=ols.0.2.py
+Ported from the Python implemented by Vincent Nijs
+http://www.scipy.org/Cookbook/OLS?action=AttachFile&do=get&target=ols.0.2.py
 
 OLS can be used on the following types of equations:
 ```julia
