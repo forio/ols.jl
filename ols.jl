@@ -25,25 +25,25 @@
 ### Summary: summary(reg)
 
 type ols
-    y::Array{Float}
-    x::Array{Float}
+    y::Array{Float64}
+    x::Array{Float64}
     y_varnm::String
     x_varnm::Array{String, 1}
-    inv_xx::Array{Float}
-    b::Array{Float, 1}
+    inv_xx::Array{Float64}
+    b::Array{Float64, 1}
     nobs::Int
     ncoef::Int
     df_e::Int
     df_r::Int
     er::Array
-    sse::Float
-    se::Array{Float, 1}
-    t::Array{Float}
+    sse::Float64
+    se::Array{Float64, 1}
+    t::Array{Float64}
     #p::Array
-    R2::Float
-    R2adj::Float
-    F::Float
-    #Fpv::Float
+    R2::Float64
+    R2adj::Float64
+    F::Float64
+    #Fpv::Float64
     
     function ols(y, x, y_varnm, x_varnm)
         x = hcat(ones(size(x, 1)), x)
