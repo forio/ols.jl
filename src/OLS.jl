@@ -24,6 +24,12 @@
 ### F-Statistic: reg.F
 ### Summary: summary(reg)
 
+module OLS
+
+import Base.summary
+
+export ols
+
 type ols
     y::Array{Float64}
     x::Array{Float64}
@@ -120,8 +126,10 @@ function summary(self::ols)
     println("R-Squared            $(self.R2)        Durbin-Watson Stat: $(dw(self))")
     println("Adjusted R-Squared   $(self.R2adj)        Omnimbus Stat:      ?")
     println("F-Statistic          $(self.F)        Prob(Omnibus stat): ?")
-    println("Log-Likelihood       $loglike       Prob(JB):           ?")
-    println("AIC Criterion        $aic        Skew:               ?")
-    println("BIC Criterion        $bic         Kurtosis:           ?")
+    println("Log-Likelihood       $loglike         Prob(JB):           ?")
+    println("AIC Criterion        $aic          Skew:               ?")
+    println("BIC Criterion        $bic        Kurtosis:           ?")
     println("========================================================================================")
 end
+
+end # module
